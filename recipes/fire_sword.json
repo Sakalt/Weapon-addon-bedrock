@@ -1,0 +1,26 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "custom:fire_sword"
+    },
+    "tags": ["crafting_table"],
+    "pattern": [
+      " B ",
+      " S ",
+      " S "
+    ],
+    "key": {
+      "B": {
+        "item": "minecraft:blaze_rod"
+      },
+      "S": {
+        "item": "minecraft:stick"
+      }
+    },
+    "result": {
+      "item": "custom:fire_sword",
+      "count": 1
+    }
+  }
+}
