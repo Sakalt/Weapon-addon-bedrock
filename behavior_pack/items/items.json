@@ -1,0 +1,81 @@
+{
+  "format_version": "1.20",
+  "minecraft:item": {
+    "description": {
+      "identifier": "custom:fire_sword",
+      "category": "equipment",
+      "is_experimental": false
+    },
+    "components": {
+      "minecraft:icon": "fire_sword",
+      "minecraft:damage": 500,
+      "minecraft:attack_damage": 7,
+      "minecraft:durability": {
+        "max_durability": 1561
+      },
+      "minecraft:on_use_on_entity": {
+        "event": "ignite_entity",
+        "target": "other"
+      }
+    },
+    "events": {
+      "ignite_entity": {
+        "sequence": [
+          {
+            "set_on_fire": {
+              "target": "other",
+              "duration": 5
+            }
+          }
+        ]
+      }
+    }
+  },
+  "minecraft:item": {
+    "description": {
+      "identifier": "custom:ice_sword",
+      "category": "equipment",
+      "is_experimental": false
+    },
+    "components": {
+      "minecraft:icon": "ice_sword",
+      "minecraft:damage": 500,
+      "minecraft:attack_damage": 5.95,
+      "minecraft:durability": {
+        "max_durability": 1561
+      },
+      "minecraft:on_use_on_entity": {
+        "event": "freeze_entity",
+        "target": "other"
+      }
+    },
+    "events": {
+      "freeze_entity": {
+        "sequence": [
+          {
+            "add_mob_effect": {
+              "effect": "minecraft:slowness",
+              "duration": 100,
+              "amplifier": 1
+            }
+          }
+        ]
+      }
+    }
+  },
+  "minecraft:item": {
+    "description": {
+      "identifier": "custom:bone_sword",
+      "category": "equipment",
+      "is_experimental": false
+    },
+    "components": {
+      "minecraft:icon": "bone_sword",
+      "minecraft:damage": 500,
+      "minecraft:attack_damage": 6,
+      "minecraft:durability": {
+        "max_durability": 250
+      }
+    }
+  }
+}
