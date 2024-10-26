@@ -1,0 +1,26 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "custom:ice_sword"
+    },
+    "tags": ["crafting_table"],
+    "pattern": [
+      " I ",
+      " S ",
+      " S "
+    ],
+    "key": {
+      "I": {
+        "item": "minecraft:ice"
+      },
+      "S": {
+        "item": "minecraft:stick"
+      }
+    },
+    "result": {
+      "item": "custom:ice_sword",
+      "count": 1
+    }
+  }
+}
