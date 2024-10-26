@@ -40,7 +40,7 @@
     "components": {
       "minecraft:icon": "ice_sword",
       "minecraft:damage": 500,
-      "minecraft:attack_damage": 5.95,
+      "minecraft:attack_damage": 5,
       "minecraft:durability": {
         "max_durability": 1561
       },
@@ -75,6 +75,38 @@
       "minecraft:attack_damage": 6,
       "minecraft:durability": {
         "max_durability": 250
+      }
+    }
+  },
+  "minecraft:item": {
+    "description": {
+      "identifier": "custom:god_greatblade",
+      "category": "equipment",
+      "is_experimental": false
+    },
+    "components": {
+      "minecraft:icon": "god_greatblade",
+      "minecraft:damage": 500,
+      "minecraft:attack_damage": 12,  // 高い攻撃力
+      "minecraft:durability": {
+        "max_durability": 2000  // 耐久力
+      },
+      "minecraft:on_use_on_entity": {
+        "event": "apply_slow_effect",
+        "target": "self"  // 自分に効果を与える
+      }
+    },
+    "events": {
+      "apply_slow_effect": {
+        "sequence": [
+          {
+            "add_mob_effect": {
+              "effect": "minecraft:slowness",
+              "duration": 100,
+              "amplifier": 2  // 鈍化効果の強さ
+            }
+          }
+        ]
       }
     }
   }
